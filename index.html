@@ -12,20 +12,22 @@
   </head>
   <body>
     <main class="d-flex align-items-center">
-      <div id="entre" class="container d-flex flex-column align-items-center">
+      <div
+        id="entre"
+        class="container d-none d-flex flex-column align-items-center"
+      >
         <div class="mt-3">
           <img src="./assets/images/mybank-logo-vector.png" alt="" />
         </div>
         <div class="bg-info m-5 p-5 rounded-4">
           <form class="">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label h4"
-                >Full name</label
-              >
+              <label for="name" class="form-label h4">Full name</label>
               <input
                 type="text"
+                name="name"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="nameInput"
                 placeholder="Your name"
               />
             </div>
@@ -36,42 +38,43 @@
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="passwordInput"
                 placeholder="Your password"
               />
             </div>
             <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
+              <input type="checkbox" class="form-check-input" id="checkbox" />
               <label class="form-check-label" for="exampleCheck1"
                 >Show password</label
               >
             </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button id="signInBtn" type="button" class="btn btn-primary">
+              Sign in
+            </button>
           </form>
         </div>
       </div>
       <div
         id="account"
-        class="container d-none d-flex flex-column align-items-center justify-content-center w-25 bg-info rounded-4 p-4"
+        class="container d-flex flex-column align-items-center justify-content-center w-25 bg-info rounded-4 p-4"
       >
         <div>
           <img src="./assets/images/3569758-200.png" alt="User pic" />
         </div>
         <div class="container d-flex flex-column align-items-center">
-          <h2>Dear ,</h2>
-          <p class="h5">Your Balance:</p>
+          <h2 id="cardTitle"></h2>
+          <p id="currentBalance" class="h5"></p>
           <input
             class="form-control"
+            id="amountInput"
             type="number"
             placeholder="Enter the amount of money"
           />
           <div class="mt-2">
-            <button type="button" class="btn btn-success">Add</button>
-            <button type="button" class="btn btn-warning">
+            <button id="addBtn" type="button" class="btn btn-success">
+              Add
+            </button>
+            <button id="withdrawBtn" type="button" class="btn btn-warning">
               Withdraw money
             </button>
           </div>
@@ -79,6 +82,6 @@
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/index.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
